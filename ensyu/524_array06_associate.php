@@ -6,11 +6,23 @@
         "japanese" => ["satou" => 74, "suzuki" => 78, "takahashi" => 80] 
             ];
 
-    foreach($score as $key => $value){
-        echo $key;  //english,math, japaneseが出力
-        print_r($value);  //english,math, japanese以外のデータが出力
-        echo '<br>';    
 
+    echo "<table border=1>";
+    echo "<th>科目</th><th>さとう</th><th>すずき</th><th>たかはし</th>";
+
+    foreach($score as $key=>$value)
+    {
+        //echo "<tr>".$key."</tr>";
+        echo "<tr>";
+        echo "<td>".$key."</td>";
+        foreach($value as $val)
+        {
+
+            echo "<td>" .$val ."</td>";  //配列の中の単一データを示す
+        }
+        echo '</tr>'; 
     }
+    echo '</table>';
+
 ?>
 
