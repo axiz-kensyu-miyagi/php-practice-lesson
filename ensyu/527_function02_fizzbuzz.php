@@ -1,29 +1,22 @@
 <?php   #527_function02_fizzbuzz.php
 
-    function fizzbuzz($num):string
-    {
-        if($num/3 === 0){
-            return 'Fizz';
-        }else if($num/5 === 0)
-        {
-            return 'BUZZ';
-        }else{
-            return $num;
-        }
+function fizzbuzz($num) {
+
+    if ($num % 15 == 0)
+     {
+       print "FizzBuzz" ;
+     }elseif ($num % 5 == 0)
+     {
+       print "Buzz" ;
+     }elseif ($num % 3 == 0)
+      {
+       print "Fizz" ;
+    }else
+     {
+       print $num ;
     }
+}
 
-//    $num = 5;
-    echo fizzbuzz('63');
+echo fizzbuzz(24);
 
-
-    //関数の定義
-    function foo($val){
-    echo $val + 100;
-    }
- 
-    $num = 100;
- 
-    //関数の呼出し
-    foo($num);
-
-    ?>
+?>
